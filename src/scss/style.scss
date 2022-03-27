@@ -1,2 +1,40 @@
-@import "fonts";
+//<обнуление>=============================
+@import "nullstile";
+//</обнуление>=============================
 
+//<подключение шрифтов>=================================
+@import "fonts";
+//</подключение шрифтов>=================================
+
+//<иконочные шрифты>=================================
+@import "icons";
+//</иконочные шрифты>=================================
+
+//<Шрифт по умолчанию>=================================
+$fontFamily: "Gilroy";
+$fontSize: 16;
+//</Шрифт по умолчанию>=================================
+
+body {
+   font-family: $fontFamily;
+   font-size: $fontSize;
+   position: relative;
+}
+body._lock {
+   overflow: hidden;
+}
+
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+}
+.main {
+   flex: 1 1 auto;
+}
+.container {
+   /*max-width: 1534px;*/
+   margin: 0 auto;
+}

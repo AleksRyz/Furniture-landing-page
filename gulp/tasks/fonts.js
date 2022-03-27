@@ -40,8 +40,8 @@ export const ttfToWoff = () => {
       // выгружаем в папку с результатом
       .pipe(app.gulp.dest(`${app.path.build.fonts}`));
 }
-export const fontsStyle = () => {
 
+export const fontsStyle = () => {
 
    // Файл стилей подключения шрифтов
    let fontsFile = `${app.path.srcFolder}/scss/fonts.scss`;
@@ -59,6 +59,7 @@ export const fontsStyle = () => {
             fs.writeFile(fontsFile,'',cb);
             let newFileOnly;
             for (let i = 0; i < fontsFiles.length; i++) {
+
                // Записываем подключения шрифтов в файл стилей
               
                let fontFileName = fontsFiles[i].split('.')[0];
