@@ -171,7 +171,8 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: "Gilroy";
-  font-size: 16;
+  font-size: 16px;
+  color: #3A3A3A;
   position: relative;
 }
 
@@ -180,6 +181,8 @@ body._lock {
 }
 
 .wrapper {
+  max-width: 1440px;
+  width: 100%;
   min-height: 100%;
   overflow: hidden;
   display: flex;
@@ -192,6 +195,7 @@ body._lock {
 }
 
 .container {
-  /*max-width: 1534px;*/
+  max-width: 1270px;
+  padding: 0 15px;
   margin: 0 auto;
 }

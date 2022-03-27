@@ -12,12 +12,26 @@
 
 //<Шрифт по умолчанию>=================================
 $fontFamily: "Gilroy";
-$fontSize: 16;
+$fontSize: 16px;
 //</Шрифт по умолчанию>=================================
+
+//<переменые>=================================
+$mainColor: #3A3A3A;
+$maxWidth: 1440px;
+$maxWidthContainer: 1270px;
+
+
+$orangeColor: #E89F71;
+$grayColor: #898989;
+$darkGrayColor: #616161;
+
+//<переменые>=================================
+
 
 body {
    font-family: $fontFamily;
    font-size: $fontSize;
+   color: $mainColor;
    position: relative;
 }
 body._lock {
@@ -25,6 +39,8 @@ body._lock {
 }
 
 .wrapper {
+   max-width: $maxWidth;
+   width: 100%;
    min-height: 100%;
    overflow: hidden;
    display: flex;
@@ -35,6 +51,7 @@ body._lock {
    flex: 1 1 auto;
 }
 .container {
-   /*max-width: 1534px;*/
+   max-width: $maxWidthContainer;
+   padding: 0 15px;
    margin: 0 auto;
 }
