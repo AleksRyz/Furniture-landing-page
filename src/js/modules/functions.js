@@ -1,4 +1,4 @@
-// Проверка поддержки webp, добавление класса _webp или _no-webp для HTML
+// =====<Проверка поддержки webp, добавление класса _webp или _no-webp для HTML>=====
 export function isWebp() {
 
    // JS-функция определения поддержки WebP
@@ -18,3 +18,37 @@ export function isWebp() {
       document.documentElement.classList.add(className);
    });
 }
+// =====</Проверка поддержки webp, добавление класса _webp или _no-webp для HTML>=====
+
+
+// =====<проверка дисплея на тачскрин или ПК>==========
+export const isMobile = {
+   Android: function () {
+      return navigator.userAgent.match(/Android/i);
+   },
+   BlackBerry: function () {
+      return navigator.userAgent.match(/BlackBerry/i);
+   },
+   iOS: function () {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+   },
+   Opera: function () {
+      return navigator.userAgent.match(/Opera Mini/i);
+   },
+   Windows: function () {
+      return navigator.userAgent.match(/IEMobile/i);
+   },
+   any: function () {
+      return (
+         isMobile.Android() ||
+         isMobile.BlackBerry() ||
+         isMobile.iOS() ||
+         isMobile.Opera() ||
+         isMobile.Windows());
+   }
+};
+
+if (isMobile.any()) {
+   document.querySelector('html').classList.add('_touch'); /* дисплей тачскрин*/
+}
+// =====</проверка дисплея на тачскрин или ПК>==========

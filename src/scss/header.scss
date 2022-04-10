@@ -1,0 +1,426 @@
+.header {
+   position: absolute;
+   width: 100%;
+   top: 0;
+   left: 0;
+}
+.header__wrapper {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: 1;
+}
+.header__body {
+   display: flex;
+   align-items: center;
+   padding: 5px 0;
+   min-height: 125px;
+   @media (max-width: $md2) {
+      min-height: 90px;
+   }
+   @media (max-width: $md3) {
+      min-height: 50px;
+   }
+}
+.header__main {
+   display: flex;
+   flex: 0 0 494/1240 * 100%;
+   align-items: center;
+   @media (max-width: $md2) {
+      flex: 1 1 auto;
+   }
+   
+}
+.header__logo {
+   color: #000;
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 29/24 * 100%;
+   z-index: 5;
+}
+
+//===================================<header__menu>==================================================
+.header__menu {
+   flex: 0 1 420px;
+}
+.menu__body{
+   // меню бургера
+   @media (max-width: $md3) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      top: 0;
+      left: -100%; //скрываем меню
+      background-color: #F4F5F7;
+      transition: left 0.3s ease 0s;
+      padding: 70px 15px 30px 15px;
+      &::before{
+         content: '';
+         position: fixed;
+         width: 100%;
+         height: 50px;
+         top: 0;
+         left: -100%;
+         transition: left 0.3s ease 0s;
+         background: #F9F1E7;
+         z-index: 2;
+      }
+      &._active{
+         left: 0;
+         &::before{
+            left: 0;
+            z-index: 10;
+         }
+      }
+   }
+   
+}
+.menu__list{
+   @media (min-width: $md3){
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+   }
+}
+// =============================<пункты меню>======================================
+.menu__item {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin: 0px 3px;
+   padding: 5px 0px;
+   position: relative;
+
+   // =====================<выпадение меню на PC устройствах>===========================
+   // медиа запрос, который работает только при наведении мыши
+   @media (any-hover: hover) {
+      &:hover{
+         .menu__sub-list {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0px, 0px);
+            pointer-events:auto;
+         }
+         .menu__arrow{
+            transform: rotate(180deg);
+         }
+         .menu__arrow,
+         .menu__link{
+            font-weight: 600;
+            color: $orangeColor;
+         }
+         .menu__sub-link:hover{
+            font-weight: 600;
+         }
+      }
+   }
+      // =====================</выпадение меню на PC устройствах>===========================
+
+   // =====================<выпадение меню для мобильных устройств>=========================
+   // для мобильных устройств с шириной экр >768px
+   @media (min-width: $md3) {
+      &._hover{
+         .menu__sub-list {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0px, 0px);
+            pointer-events:auto;
+         }
+         .menu__arrow{
+            transform: rotate(180deg);
+         }
+         .menu__arrow,
+         .menu__link{
+            font-weight: 600;
+            color: $orangeColor;
+         }
+         .menu__sub-link:hover{
+            font-weight: 600;
+         }
+      }
+   }
+
+   // для мобильных устройств с шириной экр <768px
+   @media (max-width: $md3) {
+      &._hover{
+         .menu__sub-list {
+            opacity: 1;
+            visibility: visible;
+            pointer-events:auto;
+            width: 100%;
+            position: relative;
+            display: block;
+            height: auto;
+         }
+         .menu__arrow{
+            transform: rotate(180deg);
+         }
+         .menu__arrow,
+         .menu__link{
+            font-weight: 600;
+            color: $orangeColor;
+         }
+         .menu__sub-link:hover{
+            font-weight: 600;
+         }
+      }
+   }
+
+   // =====================</выпадение меню для мобильных устройств>=========================
+}
+// =============================</пункты меню>======================================
+
+.menu__link {
+   font-weight: 500;
+   color: inherit;
+   transition: color 0.3s ease 0s;
+   @media (max-width: $md3){
+      font-size: 24px;
+      font-weight: 600;
+      margin: 10px;
+   }
+}
+.menu__arrow {
+   background: inherit;
+   margin-left: 8px;
+   transition: all 0.3s ease 0s;
+   font-size: 8px;
+   @media (max-width: $md3){
+      font-size: 12px;
+   }
+}
+
+//=======================<выпадающее меню>==============================
+.menu__sub-list {
+   position: relative;
+   background-color: $orangeColor;
+   padding: 15px;
+   flex: 1 1 100%;
+   border-radius: 3px;
+      // ======скрываем подменю===== 
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease 0s;
+      transform: translate(0px, 10px);
+      pointer-events: none; // избегаем взаимодействие с меню
+      //=============================
+      box-shadow: 0.2em 0.2em 3px $grayColor;
+      left: 0;
+      position: absolute;
+      top: 100%;
+      z-index: 5;
+      @media (max-width: $md3){
+         transform: translate(0px, 0px);
+         pointer-events:auto;
+         width: 100%;
+         position: relative;
+         display: none;
+         box-shadow: none;
+         transition: all 0.3s ease 0s;
+     }
+
+}
+.menu__sub-item {
+   min-width: 150px;
+   &:not(:last-child) {
+      margin-bottom: 8px;
+   }
+}
+.menu__sub-link {
+   color: #fff;
+   line-height: 120%;
+   @media (max-width: $md3){
+      font-size: 20px;
+    }
+}
+//======================</выпадающее меню>========================
+
+//==========================================</header__menu>==============================================
+
+//========================<форма поиска>=============================
+.header__search {
+   padding-right: 32px;
+   // для экранов шире 992px
+   @media (min-width:$md2) {
+      flex: 1 1 auto;
+   }
+   @media (max-width:$md5) {
+      padding: 15px;
+   }
+}
+.search__form {
+   max-width: 473px;
+   // показываем форму поиска
+   &._active{
+      .search-form__item{
+         top: 100%;
+         opacity: 1;
+         visibility: visible;
+      }
+      .search-form__icon{
+         color: $orangeColor;
+      }
+   }
+}
+// иконка поиска
+.search-form__icon{
+   position: relative;
+   z-index: 5;
+   font-size: 22px;
+   color: #262F56;
+   //скрываем на больших экранах
+   @media (min-width: $md2){
+      display: none;
+   }
+}
+.search-form__item {
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+   @media (max-width: $md2) {
+      box-shadow: 0 0 5px rgba(212,209,205,0.3);
+      position: absolute;
+      width: 100%;
+      left: 0;
+      z-index: 5;
+      //скрытие формы поиска
+      top: -100%;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease 0s;
+   }
+   
+}
+.search-form__btn {
+   flex: 0 0 45px;
+   height: 45px;
+   font-size: 15px;
+   color: #333333;
+}
+.search-form__input {
+   font-size: 14px;
+   width: 100%;
+   padding-right: 20px;
+   color: $darkGrayColor;
+}
+//===========================</форма поиска>===============================
+
+.header__actions {
+   position: relative;
+   z-index: 5;
+   display: grid;
+   grid-template-columns: auto;
+   grid-auto-flow: column;
+   align-items: center;
+   gap: 32px;
+   @media (max-width:$md5) {
+      gap: 15px;
+   }
+}
+
+.actions-header {
+}
+.actions-header__item {
+}
+// иконка избранное
+.actions-header__favorite {
+   color: #262F56;
+   font-size: 22px;
+   transition: color 0.3s ease 0s;
+   @media (any-hover: hover) {
+      &:hover{
+         color: $orangeColor;
+      }
+   }
+}
+// корзина
+.cart-header {
+}
+// иконка корзины
+.cart-header__icon {
+   color: #262F56;
+   font-size: 26px;
+   transition: color 0.3s ease 0s;
+   position: relative;
+   
+   @media (any-hover: hover) {
+      &:hover{
+         color: $orangeColor;
+      }
+   }
+   // количество товаров в корзине
+   span {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: -10px;
+      left: 10px;
+      border-radius: 50%;
+      background-color: $orangeColor;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 500;
+   }
+}
+
+// выпадающий список
+.cart-header__body {
+}
+.cart-header__list {
+}
+.cart-list {
+}
+//===================
+
+// Burger========================================================
+.menu-burger {
+   display: none;
+   @media (max-width: $md3) {
+      margin-left: 32px;
+      position: relative;
+      display: block;
+      flex: 0 0 30px;
+      height: 18px;
+      cursor: pointer;
+      z-index: 5;
+      span {
+         transition: all 0.3s ease 0s;
+         top: calc(50% - 1px);
+         left: 0px;
+         position: absolute;
+         width: 100%;
+         height: 2px;
+         background-color: #000;
+         border-radius: 2px;
+         &:first-child {
+            top: 0;
+         }
+         &:last-child {
+            top: auto;
+            bottom: 0;
+         }
+      }
+      &._active {
+         span {
+            transform: scale(0);
+            &:first-child {
+               transform: rotate(-45deg);
+               top: calc(50% - 1px);
+            }
+            &:last-child {
+               transform: rotate(45deg);
+               bottom: calc(50% - 1px);
+            }
+         }
+      }
+   }
+   @media (max-width: $md5){
+      margin-right: 10px;
+   }
+}

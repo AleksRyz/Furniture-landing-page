@@ -19,6 +19,10 @@ $fontSize: 16px;
 $mainColor: #3A3A3A;
 $maxWidth: 1440px;
 $maxWidthContainer: 1270px;
+$md2: 992px;
+$md3: 768px;
+$md4: 480px;
+$md5: 320px;
 
 
 $orangeColor: #E89F71;
@@ -46,6 +50,7 @@ body._lock {
    display: flex;
    flex-direction: column;
    position: relative;
+   margin: 0 auto;
 }
 .main {
    flex: 1 1 auto;
@@ -55,3 +60,7 @@ body._lock {
    padding: 0 15px;
    margin: 0 auto;
 }
+
+/*===<header>=================================*/
+@import "header";
+/*===</header>=================================*/
