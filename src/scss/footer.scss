@@ -1,0 +1,165 @@
+.footer {
+}
+.footer__container {
+}
+
+.footer__body {
+   border-top: 1px solid #d8d8d8;
+   display: grid;
+   grid-template-columns: 250px 1fr 290px;
+   column-gap: 80px;
+   padding: 80px 0 60px 0;
+   @media (max-width: $md1) {
+   grid-template-rows: auto auto;
+   grid-template-columns: 1fr 290px;
+   }
+   @media (max-width: $md2) {
+      display: block;
+   }
+   @media (max-width: $md5) {
+      column-gap: 0;
+      padding: 30px 0;
+   }
+   
+}
+
+// ===============================<блок с контактами>======================================================
+.footer__main {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   @media (max-width: $md1){
+      grid-column: span 2;
+      margin-bottom: 40px;
+   }
+}
+.footer__logo {
+   margin-bottom: 16px;
+}
+._footer-title {
+   font-size: 24px;
+   line-height: 29/24*100%;
+   color: #000;
+   font-weight: 700;
+}
+.footer__text {
+   color: $grayColor;
+   line-height: 150%;
+   margin-bottom: 16px;
+
+}
+.contacts-footer {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+.contacts-footer__item {
+   display: inline-flex;
+   align-items: center;
+   color: $grayColor;
+   line-height: 150%;
+   transition: color 0.3s ease 0s;
+   &::before{
+      margin-right: 8px;
+   }
+   &:not(:last-child){
+   margin-bottom: 16px;
+   }
+   @media (any-hover: hover) {
+      &:hover{
+         color: $orangeColor;
+      }
+   }
+}
+// ===============================</блок с контактами>=====================================================
+
+// ===============================<блок с меню>============================================================
+.footer__menu {
+   @media (max-width: $md1){
+      margin-bottom: 40px;
+   }
+}
+.menu-footer {
+   @media (min-width: $md3) {
+      display: flex;
+   }
+   
+}
+.menu-footer__column {
+   @media (min-width: $md3){
+   flex: 0 1 33.333%
+   }
+   @media (max-width: $md3){
+     margin-bottom: 30px;
+      }
+
+}
+.menu-footer__title {
+}
+._footer-title {
+   cursor: default;
+   margin-bottom: 16px;
+}
+.menu-footer__list {
+   li{
+   &:not(:last-child){
+   margin-bottom: 16px;
+   }
+   }
+}
+.menu-footer__link {
+   color: $darkGrayColor;
+   line-height: 120%;
+   font-weight: 500;
+   transition: color 0.3s ease 0s;
+   @media (any-hover: hover) {
+      &:hover{
+         color: $orangeColor;
+      }
+   }
+}
+// ===============================</блок с меню>===========================================================
+
+// ===============================<блок с формой подписки>=================================================
+.footer__subscribe {
+}
+.subscribe {
+}
+.subscribe__title {
+}
+._footer-title {
+}
+.subscribe__form {
+   display: flex;
+   position: relative;
+   
+}
+.subscribe__input {
+   width: 100%;
+   padding: 0 12px;
+   background-color: #f4f5f7;
+   color: #828282;
+   @media (max-width: $md1){
+      max-width: 242px;
+      }
+}
+.subscribe__button {
+   flex: 0 0 45px;
+   height: 45px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 18px;
+   background-color: $orangeColor;
+   color: #fff;
+   margin-right: 4px;
+   transition: color 0.3s ease 0s;
+   @media (any-hover: hover) {
+      &:hover{
+         background-color: #eb803d;
+      }
+   }
+}
+._icon-send {
+}
+// ===============================</блок с формой подписки>================================================

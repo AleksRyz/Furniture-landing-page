@@ -10,6 +10,9 @@
    top: 0;
    left: 0;
    z-index: 1;
+   @media (max-width: $md3) {
+      background: #F9F1E7;
+   }
 }
 .header__body {
    display: flex;
@@ -36,7 +39,7 @@
    color: #000;
    font-weight: 700;
    font-size: 24px;
-   line-height: 29/24 * 100%;
+   line-height: 29 / 24 * 100%;
    z-index: 5;
 }
 
@@ -248,7 +251,7 @@
       flex: 1 1 auto;
    }
    @media (max-width:$md5) {
-      padding: 15px;
+      padding:  0 15px;
    }
 }
 .search__form {

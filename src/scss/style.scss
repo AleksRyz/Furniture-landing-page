@@ -19,6 +19,7 @@ $fontSize: 16px;
 $mainColor: #3A3A3A;
 $maxWidth: 1440px;
 $maxWidthContainer: 1270px;
+$md1: $maxWidthContainer + 12px;
 $md2: 992px;
 $md3: 768px;
 $md4: 480px;
@@ -61,6 +62,6 @@ body._lock {
    margin: 0 auto;
 }
 
-/*===<header>=================================*/
+
 @import "header";
-/*===</header>=================================*/
+@import "footer";
