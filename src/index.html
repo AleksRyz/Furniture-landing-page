@@ -1,18 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/head.html',{
-"title":"Funiro"
+"title":"Furniture"
 })
 
 <body>
    <div class="wrapper">
       @@include('html/header.html',{})
-      <main class="main">
-
+      <main class="page">
+         <!-- section page__main-slider -->
+         <section class="page__main-slider main-slider">
+            <div class="main-slider__container container">
+               <div class="main-slider__body">
+                  <div class="main-slider__content content-main">
+                     <h1 class="content-main__title">High-Quality Furniture Just For You</h1>
+                     <p class="content-main__text">Our furniture is made from selected and best quality materials that are suitable for your dream home</p>
+                     <a href="#" class="content-main__button btn">Shop Now</a>
+                  </div>
+                  
+                  <div class="main-slider__slider slider-main">
+                     <div class="slider-main__controls controls-slider-main">
+                        <!--  Dotts slider -->
+                        <div class="controls-slider-main__dotts "></div>
+                        <!-- Arrows slider -->
+                        <div class="controls-slider-main__arrows slider-arrows">
+                           <button type="button" class="slider-arrow slider-arrow__prev _icon-arrow-down"></button>
+                           <button type="button" class="slider-arrow slider-arrow__next _icon-arrow-down"></button>
+                        </div>
+                     </div>
+                     <!-- slider -->
+                     <div class="slider-main__body _swiper">
+                        <!-- slide 1-->
+                        <div class="slider-main__slide">
+                           <div class="slider-main__image ibg ">
+                              <img src="img/main-slider/sofa.jpg" alt="image">
+                           </div>
+                           <a href="#" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="slider-main__content">
+                              <div class="slider-main__title">Gio Sofa</div>
+                              <div class="slider-main__text">Luxury big sofa 2-seat</div>
+                              <div class="slider-main__price _icon-arrow-link">$500</div>
+                           </a>
+                        </div>
+                         <!-- /slide 1-->
+                         <!-- slide 2-->
+                         <div class="slider-main__slide">
+                           <div class="slider-main__image ibg">
+                              <img src="img/main-slider/bedroom.jpg" alt="image">
+                           </div>
+                           <a href="#" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="slider-main__content">
+                              <div class="slider-main__title">Wayfair</div>
+                              <div class="slider-main__text">Josie Upholstered Platform Bed</div>
+                              <div class="slider-main__price _icon-arrow-link">$305</div>
+                           </a>
+                        </div>
+                         <!-- /slide 2-->
+                          <!-- slide 3-->
+                        <div class="slider-main__slide">
+                           <div class="slider-main__image ibg">
+                              <img src="img/main-slider/lounge.jpg" alt="image">
+                           </div>
+                           <a href="#" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="slider-main__content">
+                              <div class="slider-main__title">Zinus</div>
+                              <div class="slider-main__text">Luxury big sofa 2-seat</div>
+                              <div class="slider-main__price _icon-arrow-link">$700</div>
+                           </a>
+                        </div>
+                         <!-- /slide 3-->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
       </main>
       @@include('html/footer.html',{})
    </div>
-   <script src="js/app.min.js"></script>
+   @@include('html/js.html',{})
+
 </body>
 
 </html>

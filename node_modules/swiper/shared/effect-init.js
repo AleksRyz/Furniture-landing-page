@@ -30,12 +30,14 @@ export default function effectInit(params) {
   });
   let requireUpdateOnVirtual;
   on('virtualUpdate', () => {
+    if (swiper.params.effect !== effect) return;
+
     if (!swiper.slides.length) {
       requireUpdateOnVirtual = true;
     }
 
     requestAnimationFrame(() => {
-      if (requireUpdateOnVirtual && swiper.slides.length) {
+      if (requireUpdateOnVirtual && swiper.slides && swiper.slides.length) {
         setTranslate();
         requireUpdateOnVirtual = false;
       }

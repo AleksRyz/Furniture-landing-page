@@ -19,7 +19,8 @@ export default function A11y(_ref) {
       containerMessage: null,
       containerRoleDescriptionMessage: null,
       itemRoleDescriptionMessage: null,
-      slideRole: 'group'
+      slideRole: 'group',
+      id: null
     }
   });
   let liveRegion = null;
@@ -211,7 +212,7 @@ export default function A11y(_ref) {
 
 
     const $wrapperEl = swiper.$wrapperEl;
-    const wrapperId = $wrapperEl.attr('id') || `swiper-wrapper-${getRandomNumber(16)}`;
+    const wrapperId = params.id || $wrapperEl.attr('id') || `swiper-wrapper-${getRandomNumber(16)}`;
     const live = swiper.params.autoplay && swiper.params.autoplay.enabled ? 'off' : 'polite';
     addElId($wrapperEl, wrapperId);
     addElLive($wrapperEl, live); // Slide

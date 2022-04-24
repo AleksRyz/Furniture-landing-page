@@ -231,6 +231,9 @@ class SwiperSlideDirective {
             isDuplicate: false,
         };
     }
+    set ngClass(val) {
+        this.class = [this.class || '', val].join(' ');
+    }
     set zoom(val) {
         this._zoom = coerceBooleanProperty(val);
     }
@@ -258,7 +261,7 @@ class SwiperSlideDirective {
     }
 }
 SwiperSlideDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.2", ngImport: i0, type: SwiperSlideDirective, deps: [{ token: i0.TemplateRef }], target: i0.ɵɵFactoryTarget.Directive });
-SwiperSlideDirective.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "12.0.0", version: "13.0.2", type: SwiperSlideDirective, selector: "ng-template[swiperSlide]", inputs: { virtualIndex: "virtualIndex", class: "class", autoplayDelay: ["data-swiper-autoplay", "autoplayDelay"], zoom: "zoom" }, ngImport: i0 });
+SwiperSlideDirective.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "12.0.0", version: "13.0.2", type: SwiperSlideDirective, selector: "ng-template[swiperSlide]", inputs: { virtualIndex: "virtualIndex", class: "class", ngClass: "ngClass", autoplayDelay: ["data-swiper-autoplay", "autoplayDelay"], zoom: "zoom" }, ngImport: i0 });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.2", ngImport: i0, type: SwiperSlideDirective, decorators: [{
             type: Directive,
             args: [{
@@ -267,6 +270,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.2", ngImpor
         }], ctorParameters: function () { return [{ type: i0.TemplateRef }]; }, propDecorators: { virtualIndex: [{
                 type: Input
             }], class: [{
+                type: Input
+            }], ngClass: [{
                 type: Input
             }], autoplayDelay: [{
                 type: Input,

@@ -52,3 +52,15 @@ if (isMobile.any()) {
    document.querySelector('html').classList.add('_touch'); /* дисплей тачскрин*/
 }
 // =====</проверка дисплея на тачскрин или ПК>==========
+
+//Применение класса "ibg" для адаптива картинок. берет путь картинки и назначает его фоном родительского блока
+export function ibg(){
+	let ibg=document.querySelectorAll(".ibg");
+	for (var i = 0; i < ibg.length; i++) {
+		if(ibg[i].querySelector('img')){
+		ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('img').getAttribute('src')+')';
+		}
+	}
+}
+
+

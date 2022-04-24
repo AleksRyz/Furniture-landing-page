@@ -15,7 +15,7 @@ export default function onScroll() {
   } // eslint-disable-next-line
 
 
-  if (swiper.translate === -0) swiper.translate = 0;
+  if (swiper.translate === 0) swiper.translate = 0;
   swiper.updateActiveIndex();
   swiper.updateSlidesClasses();
   let newProgress;

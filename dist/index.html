@@ -4,8 +4,11 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- style swiper -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+   <!--nain style  -->
    <link rel="stylesheet" href="css/style.min.css">
-   <title>Funiro</title>
+   <title>Furniture</title>
 </head>
 
 <body>
@@ -15,7 +18,7 @@
       <div class="header__container container">
          <div class="header__body">
             <div class="header__main">
-               <a href="#" class="header__logo">Funiro.</a>
+               <a href="#" class="header__logo">Furniture</a>
                <!-- header__menu -->
                <div class="header__menu">
                   <nav class="menu__body">
@@ -23,21 +26,32 @@
                         <li class="menu__item"><a href="#" class="menu__link">Products</a>
                            <button type="button" class="menu__arrow _icon-arrow-down"></button>
                            <ul class="menu__sub-list">
-                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Product-1</a></li>
-                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Product-2</a></li>
-                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Product-3</a></li>
-                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Product-4</a></li>
-                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Product-5</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Zinus</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Gio-Sofa</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Wayfair</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Grifo</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Muggo</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Pingky</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Potty</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Respira</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Leviosa</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Lolito</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Syltherine</a></li>
                            </ul>
                         </li>
                         <li class="menu__item"><a href="#" class="menu__link">Rooms</a>
                            <button type="button" class="menu__arrow _icon-arrow-down"></button>
                            <ul class="menu__sub-list">
-                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Room-1</a></li>
-                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Room-2</a></li>
-                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Room-3</a></li>
-                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Room-4</a></li>
-                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Room-5</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Bedrooms</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Living Rooms</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Kitchens</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Exteriors</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Dining Rooms</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Hallways</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Home Offices</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Bathrooms</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Children's Rooms</a></li>
+                              <li class="menu__sub-item"><a href="" class="menu__sub-link">Nurseries</a></li>
                            </ul>
                         </li>
                         <li class="menu__item"><a href="#" class="menu__link">Inspirations</a></li>
@@ -84,15 +98,77 @@
       </div>
    </div>
 </header>
-      <main class="main">
-
+      <main class="page">
+         <!-- section page__main-slider -->
+         <section class="page__main-slider main-slider">
+            <div class="main-slider__container container">
+               <div class="main-slider__body">
+                  <div class="main-slider__content content-main">
+                     <h1 class="content-main__title">High-Quality Furniture Just For You</h1>
+                     <p class="content-main__text">Our furniture is made from selected and best quality materials that are suitable for your dream home</p>
+                     <a href="#" class="content-main__button btn">Shop Now</a>
+                  </div>
+                  
+                  <div class="main-slider__slider slider-main">
+                     <div class="slider-main__controls controls-slider-main">
+                        <!--  Dotts slider -->
+                        <div class="controls-slider-main__dotts "></div>
+                        <!-- Arrows slider -->
+                        <div class="controls-slider-main__arrows slider-arrows">
+                           <button type="button" class="slider-arrow slider-arrow__prev _icon-arrow-down"></button>
+                           <button type="button" class="slider-arrow slider-arrow__next _icon-arrow-down"></button>
+                        </div>
+                     </div>
+                     <!-- slider -->
+                     <div class="slider-main__body _swiper">
+                        <!-- slide 1-->
+                        <div class="slider-main__slide">
+                           <div class="slider-main__image ibg ">
+                              <img src="img/main-slider/sofa.jpg" alt="image">
+                           </div>
+                           <a href="#" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="slider-main__content">
+                              <div class="slider-main__title">Gio Sofa</div>
+                              <div class="slider-main__text">Luxury big sofa 2-seat</div>
+                              <div class="slider-main__price _icon-arrow-link">$500</div>
+                           </a>
+                        </div>
+                         <!-- /slide 1-->
+                         <!-- slide 2-->
+                         <div class="slider-main__slide">
+                           <div class="slider-main__image ibg">
+                              <img src="img/main-slider/bedroom.jpg" alt="image">
+                           </div>
+                           <a href="#" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="slider-main__content">
+                              <div class="slider-main__title">Wayfair</div>
+                              <div class="slider-main__text">Josie Upholstered Platform Bed</div>
+                              <div class="slider-main__price _icon-arrow-link">$305</div>
+                           </a>
+                        </div>
+                         <!-- /slide 2-->
+                          <!-- slide 3-->
+                        <div class="slider-main__slide">
+                           <div class="slider-main__image ibg">
+                              <img src="img/main-slider/lounge.jpg" alt="image">
+                           </div>
+                           <a href="#" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="slider-main__content">
+                              <div class="slider-main__title">Zinus</div>
+                              <div class="slider-main__text">Luxury big sofa 2-seat</div>
+                              <div class="slider-main__price _icon-arrow-link">$700</div>
+                           </a>
+                        </div>
+                         <!-- /slide 3-->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
       </main>
       <footer class="footer">
    <div class="footer__container container">
       <div class="footer__body">
          <!-- ===блок с контактами=== -->
          <div class="footer__main">
-            <a href="#" class="footer__logo _footer-title">Funiro.</a>
+            <a href="#" class="footer__logo _footer-title">Furniture</a>
             <div class="footer__text">Worldwide furniture store since 2020. We sell over 1000+ branded products on our website</div>
             <div class="footer__contacts contacts-footer">
                <a href="#" class="contacts-footer__item _icon-location">Sawojajar Malang, Indonesia</a>
@@ -148,7 +224,12 @@
    </div>
 </footer>
    </div>
-   <script src="js/app.min.js"></script>
+   <!-- swiper slider -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<!-- main file -->
+<script src="js/app.min.js"></script>
+
+
 </body>
 
 </html>

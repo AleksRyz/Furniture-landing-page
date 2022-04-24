@@ -3,26 +3,36 @@
    width: 100%;
    top: 0;
    left: 0;
+   min-height: 40px;
+   @media (max-width: $md3) {
+   min-height: 5px;
+
+   }
+   &._scroll{
+      .header__wrapper{
+         background-color: #F9F1E7;
+      }
+   }
 }
 .header__wrapper {
    position: fixed;
    width: 100%;
    top: 0;
-   left: 0;
-   z-index: 1;
+   right: 0;
+   z-index: 10;
    @media (max-width: $md3) {
-      background: #F9F1E7;
+      background-color: #F9F1E7;
    }
 }
 .header__body {
    display: flex;
    align-items: center;
    padding: 5px 0;
-   min-height: 125px;
-   @media (max-width: $md2) {
-      min-height: 90px;
+   min-height: 50px;
+   @media (min-width: $md2) {
+      min-height: 70px;
    }
-   @media (max-width: $md3) {
+   @media (min-width: $md3) {
       min-height: 50px;
    }
 }
@@ -323,11 +333,6 @@
       gap: 15px;
    }
 }
-
-.actions-header {
-}
-.actions-header__item {
-}
 // иконка избранное
 .actions-header__favorite {
    color: #262F56;
@@ -338,9 +343,6 @@
          color: $orangeColor;
       }
    }
-}
-// корзина
-.cart-header {
 }
 // иконка корзины
 .cart-header__icon {
@@ -371,15 +373,6 @@
       font-weight: 500;
    }
 }
-
-// выпадающий список
-.cart-header__body {
-}
-.cart-header__list {
-}
-.cart-list {
-}
-//===================
 
 // Burger========================================================
 .menu-burger {

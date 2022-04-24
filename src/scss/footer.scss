@@ -1,8 +1,3 @@
-.footer {
-}
-.footer__container {
-}
-
 .footer__body {
    border-top: 1px solid #d8d8d8;
    display: grid;
@@ -20,7 +15,6 @@
       column-gap: 0;
       padding: 30px 0;
    }
-   
 }
 
 // ===============================<блок с контактами>======================================================
@@ -94,8 +88,6 @@
       }
 
 }
-.menu-footer__title {
-}
 ._footer-title {
    cursor: default;
    margin-bottom: 16px;
@@ -121,14 +113,6 @@
 // ===============================</блок с меню>===========================================================
 
 // ===============================<блок с формой подписки>=================================================
-.footer__subscribe {
-}
-.subscribe {
-}
-.subscribe__title {
-}
-._footer-title {
-}
 .subscribe__form {
    display: flex;
    position: relative;
@@ -156,10 +140,8 @@
    transition: color 0.3s ease 0s;
    @media (any-hover: hover) {
       &:hover{
-         background-color: #eb803d;
+         background-color: $orangeColorHover;
       }
    }
-}
-._icon-send {
 }
 // ===============================</блок с формой подписки>================================================

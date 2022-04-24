@@ -27,11 +27,41 @@ $md5: 320px;
 
 
 $orangeColor: #E89F71;
+$orangeColorHover: #ec8646;
 $grayColor: #898989;
 $darkGrayColor: #616161;
 
+
 //<переменые>=================================
 
+.ibg{
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   }
+   
+   .ibg img{   
+   width: 0;
+   height: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   visibility: hidden;
+   }
+
+//<button>====================================
+.btn{
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0px 15px;
+   text-align: center;
+   transition: all 0.3s ease 0s;
+   min-height: 48px;
+}
+//</button>===================================
 
 body {
    font-family: $fontFamily;
@@ -44,7 +74,6 @@ body._lock {
 }
 
 .wrapper {
-   max-width: $maxWidth;
    width: 100%;
    min-height: 100%;
    overflow: hidden;
@@ -53,7 +82,7 @@ body._lock {
    position: relative;
    margin: 0 auto;
 }
-.main {
+.page {
    flex: 1 1 auto;
 }
 .container {
@@ -63,5 +92,12 @@ body._lock {
 }
 
 
+
 @import "header";
+
+@import "main/main-slider"; // section page__main-slider
+
 @import "footer";
+
+
+

@@ -1,0 +1,308 @@
+
+.main-slider {
+   background: #FCF8F3;
+}
+.main-slider__container {
+   position: relative;
+   @media (min-width: $md2) {
+      &::before{
+         content: '';
+         background: #F9F1E7;
+         position: absolute;
+         top: 0;
+         width: 100vw;
+         height: 100%;
+         right: 376px;
+      }
+   }
+}
+.main-slider__body {
+   padding-top: 140px;
+   position: relative;
+   z-index: 2;
+   @media (max-width: $md2) {
+      padding-top: 50px;
+   }
+   @media (min-width: $md2) {
+      display: flex;
+   }
+}
+.main-slider__content {
+   align-self: flex-start;
+   flex: 0 0 (494/1240) * 100%;
+   margin-bottom: 80px;
+   @media (max-width: $md2) {
+      margin:  0 -15px;
+      
+   }
+}
+.content-main {
+   position: relative;
+   z-index: 5;
+   padding: 60px 15px ;
+   background: rgba(255, 255, 255, 0.72);
+   @supports((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))){
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(31px);
+   }
+
+   @media (min-width: $md2){
+      padding: 30px;
+    
+   }
+   @media (min-width: 1200px){
+      padding: 60px;
+   }
+}
+.content-main__title {
+   font-size: 28px;
+   font-weight: 700;
+   line-height: 120%;
+   &:not(:last-child){
+      margin-bottom: 16px/56px * 1em;
+   }
+   @media (min-width: 1200px){
+   font-size: 56px;
+   }
+   @media (min-width: 480px){
+      font-size: 36px;
+      }
+}
+.content-main__text {
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 150%;
+   &:not(:last-child){
+      margin-bottom: 48px/20px * 1em;
+   }
+   @media (min-width: 480px){
+      font-size: 20px;
+      }
+}
+.content-main__button {
+   min-height: 58px;
+   font-size: 18px;
+   font-weight: 600;
+   background-color: $orangeColor;
+   color: #fff;
+   width: 100%;
+   transition: all 0.3s ease 0s;
+   @media(any-hover: hover){
+      &:hover{
+         background-color: $orangeColorHover;
+      }
+   }
+   @media (min-width: 480px){
+      min-height: 78px;
+   font-size: 20px;
+      }
+}
+.main-slider__slider {
+   flex: 1 1 auto;
+   min-width: 0;  // если слайдер внутри flex обязательно
+   align-self: flex-end;
+   @media (min-width: $md2){
+      padding-left: 32px ;
+   }
+}
+.slider-main {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   @media (max-width: $md2) {
+      align-items: stretch;
+      flex-direction: column-reverse;
+   }
+   
+}
+.slider-main__controls {
+   align-self: stretch;
+   margin-bottom: 20px;
+   @media (max-width: $md2) {
+      margin-top:  10px;
+   }
+}
+.controls-slider-main {
+   display: flex;
+   align-items: center;
+   &__dotts{
+      @media (min-width: $md2){
+         padding-right: 20px;
+      }
+      @media (max-width: $md2) {
+         justify-content: center;
+      }
+      
+   }
+}
+
+// =========================<Dotts slider>==============================
+.swiper-pagination-bullets {
+   display: flex;
+   flex-wrap: wrap;
+}
+.swiper-pagination-bullet {
+   cursor: pointer;
+   flex: 0 0 27px;
+   height: 27px;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 2px 0;
+   background:  inherit;
+   opacity: 1;
+   &:not(:last-child){
+      margin-right: 12px ;
+   }
+   &::after{
+      content: "";
+      width: 11px;
+      height: 11px;
+      background-color: #d8d8d8;
+      border-radius: 50%;
+      transition: all 0.3s ease 0s;
+   }
+   &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid $orangeColor;
+      transition: all 0.3s ease 0s;
+      transform: scale(0);
+   }
+}
+
+.swiper-pagination-bullet-active {
+   &::after{
+      background-color: $orangeColor;
+   }
+   &::before{
+      transform: scale(1);
+   }
+}
+// =========================<Dotts slider>==============================
+
+// =========================<Arrows slider>==============================
+
+
+.slider-arrows {
+   display: grid;
+   grid-template-columns: repeat(2,48px);
+   column-gap: 8px;
+}
+.slider-arrow {
+   border-radius: 50%;
+   height: 48px;
+   font-size: 12px;
+   cursor: pointer;
+   background-color: rgb(232, 159, 113,0.3);
+   color: $orangeColor;
+   @media (any-hover: hover) {
+      &:hover{
+         background-color: $orangeColor;
+         color: #fff;
+      }
+   }
+   &_white{
+      background: #FFFFFF;
+      box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.16);
+      @media (any-hover: hover) {
+         &:hover{
+            background-color: $orangeColor;
+            color: #fff;
+         }
+      }
+   }
+}
+.slider-arrow__prev {
+   &::before{
+      transform: rotate(90deg);
+   }
+}
+
+.slider-arrow__next {
+   &::before{
+      transform: rotate(-90deg);
+   }
+}
+.controls-slider-main__arrows {
+   @media (max-width: $md2) {
+      display: none;
+   }
+   
+}
+// =========================<Arrows slider>==============================
+
+// =========================<slider>==============================
+.slider-main__body {
+   overflow: visible;
+   @media (min-width: $md2){
+   width: 934px;
+}
+@media (max-width: $md2) {
+   margin:  0 -15px;
+}
+
+}
+.slider-main__slide {
+   position: relative;
+}
+.slider-main__image {
+padding-bottom: 59%;
+}
+.slider-main__content {
+   min-width: 295px ;
+   max-height: 300px;
+   overflow: auto;
+   color: inherit;
+   display: flex;
+   flex-direction: column;
+   padding: 24px;
+   @media (min-width: $md3){
+   position: absolute;
+   min-width: 350px;
+   background: rgb(255, 255, 255, 0.9);
+   right: 40px;
+   bottom: 40px;
+   }
+    @supports((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))){
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(31px);
+   }
+}
+.slider-main__title {
+   font-size: 28px;
+   line-height: 120%;
+   font-weight: 600;
+   &:not(:last-child){
+   margin-bottom: 4px/28px * 1em;
+   }
+   
+}
+.slider-main__text {
+   line-height: 150%;
+   color: $grayColor;
+   &:not(:last-child){
+   margin-bottom: 8px/16px * 1em;
+   }
+}
+.slider-main__price {
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: center;
+   justify-content: space-between;
+   line-height: 150%;
+   font-size: 20px;
+   font-weight: 600;
+   &::before{
+      margin-left: 20px;
+      font-size: 12px;
+      font-weight: 600;
+   }
+}
+// =========================</slider>==============================
