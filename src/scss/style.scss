@@ -60,6 +60,17 @@ $darkGrayColor: #616161;
    text-align: center;
    transition: all 0.3s ease 0s;
    min-height: 48px;
+   &__white{
+      color: $orangeColor;
+      background: #fff;
+      @media (any-hover: hover) {
+         &:hover{
+            background-color: $orangeColor;
+            color: #fff;
+         }
+      }
+      
+   }
 }
 //</button>===================================
 
@@ -97,6 +108,7 @@ body._lock {
 
 @import "main/main-slider"; // section page__main-slider
 @import "main/advantages"; // section page__advantages
+@import "main/products"; // section page__products
 
 @import "footer";
 

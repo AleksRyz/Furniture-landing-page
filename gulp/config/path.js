@@ -15,7 +15,9 @@ export const path = {
       html: `${buildFolder}/`,
       images: `${buildFolder}/img/`,
       fonts: `${buildFolder}/fonts/`,
-      files: `${buildFolder}/files/`  // все папки из папки src хотим перенести в папку files
+      files: `${buildFolder}/files/`,  // все папки из папки src хотим перенести в папку files
+      json: `${buildFolder}/json/`
+
    },
    //исходник
    src: {
@@ -26,6 +28,7 @@ export const path = {
       html: `${srcFolder}/*.html`,
       files: `${srcFolder}/files/**/*.*`,   // нас интересуют любые папки и файлы внутри files
       svgicons: `${srcFolder}/svgicons/*.svg`,
+      json: `${srcFolder}/json/*.*`
    },
    // наблюдать
    watch: {
@@ -34,6 +37,9 @@ export const path = {
       html: `${srcFolder}/**/*.html`,
       images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`, 
       files: `${srcFolder}/files/**/*.*`,  // наблюдатель за файлами
+      json: `${srcFolder}/json/*.*`
+
+      
    },
    clean: buildFolder,
    buildFolder: buildFolder,
